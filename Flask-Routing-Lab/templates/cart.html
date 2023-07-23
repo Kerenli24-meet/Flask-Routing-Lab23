@@ -24,7 +24,7 @@
   color: black;
 }
 
-.main {
+/*.main {
   float: left;
   width: 60%;
   padding: 0 20px;
@@ -43,7 +43,19 @@
   margin-top: 7px;
   text-align: center;
 }
+*/
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
 
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
 @media only screen and (max-width: 620px) {
   /* For mobile phones: */
@@ -66,15 +78,17 @@
 
   <div class="main">
     
-    <img src="https://www.baltini.com/cdn/shop/products/dcc8007273d8441dc5f895d7e1ca6199.jpg?height=1024&v=1688276050&width=764"   width="350" height="600">
-    <h1>Green bag- 395$</h1>
-
+    <div class="row">
+  <div class="column">
+    <img src="https://michaelkors.scene7.com/is/image/MichaelKors/DDA9590106-3127_1?$medium$" alt="Snow" style="width:100%">
+    <h1>Liht Blue Dress- 395$</h1>
   </div>
-   <div class="center">
-    
-    <img src="https://michaelkors.scene7.com/is/image/MichaelKors/MF180NV2RW-0201_IS?$productMain$"   width="350" height="600">
-    <h1>Brown Dress- 280$</h1>
-
+  <div class="column">
+    <img src="https://cdn2.jomashop.com/media/catalog/product/m/i/michael-kors-jet-set-saffiano-leather-tote--soft-pink-30f2gttt8l-187.jpg" alt="Forest" style="width:100%">
+    <h1>Pink Bag- 280$</h1>
+  </div>
+  
+</div>
   </div>
 
   <div class="right">

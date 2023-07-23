@@ -29,7 +29,26 @@
   width: 60%;
   padding: 0 20px;
 }
-.center {
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+/*.center {
   float: right;
   width: 60%;
   padding: 0 20px;
@@ -42,7 +61,7 @@
   padding: 15px;
   margin-top: 7px;
   text-align: center;
-}
+}*/
 
 
 @media only screen and (max-width: 620px) {
@@ -62,20 +81,27 @@
 <div style="overflow:auto">
   <div class="menu">
     <a href="/HP">back to home page</a>
+
   </div>
 
-  <div class="main">
-    
-    <img src="https://www.baltini.com/cdn/shop/products/dcc8007273d8441dc5f895d7e1ca6199.jpg?height=1024&v=1688276050&width=764"   width="350" height="600">
+<div class="row">
+  <div class="column">
+    <img src="https://www.baltini.com/cdn/shop/products/dcc8007273d8441dc5f895d7e1ca6199.jpg?height=1024&v=1688276050&width=764" alt="Snow" style="width:100%">
     <h1>Green bag- 395$</h1>
-
   </div>
-   <div class="center">
-    
-    <img src="https://michaelkors.scene7.com/is/image/MichaelKors/MF180NV2RW-0201_IS?$productMain$"   width="350" height="600">
+  <div class="column">
+    <img src="https://michaelkors.scene7.com/is/image/MichaelKors/MF180NV2RW-0201_IS?$productMain$" alt="Forest" style="width:100%">
     <h1>Brown Dress- 280$</h1>
-
   </div>
+  <div class="row">
+    <img src="https://michaelkors.scene7.com/is/image/MichaelKors/MR370805KZ-0110_1?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90" alt="Mountains" style="width:33.33%">
+    <h1>White Set- 340$</h1>
+  </div>
+</div>
+
+
+  
+  
 
   <div class="right">
     <h2>SALE!</h2>
